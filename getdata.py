@@ -89,7 +89,7 @@ end = "2026-02-13"
 if __name__ == "__main__":
     download_stock_data(
         my_stock_list,
-        directory="pred_data",
+        directory="stock_data",
         start_date=start,
         end_date=end
     )
