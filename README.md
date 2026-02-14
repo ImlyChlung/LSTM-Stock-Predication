@@ -49,6 +49,7 @@ The codebase is modularized to mimic a production-grade quantitative pipeline:
 ├── analyze_features.py     # Analysis: Permutation importance to interpret "Black Box" models
 ├── backtest.py             # Simulation: Event-driven backtester with dynamic portfolio management
 └── analyze_trade.py        # Reporting: Generates visualizations and financial metrics (Sharpe, Win Rate)
+```
 
 ## 💻 Installation & Usage
 
