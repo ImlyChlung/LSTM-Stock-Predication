@@ -45,7 +45,38 @@ The codebase is modularized to mimic a production-grade quantitative pipeline:
 ├── main.py                 # Data Ingestion: Downloads historical data via yfinance API
 ├── indicator.py            # Library: Custom implementation of technical indicators (RSI, MACD, BOLL, etc.)
 ├── feature_engineering.py  # ETL Pipeline: Cleans data, generates factors, calculates Alpha Targets
-├── train_model.py          # Modeling: PyTorch LSTM implementation with sliding window datasets
-├── feature_importance.py   # Analysis: Permutation importance to interpret "Black Box" models
+├── train.py                # Modeling: PyTorch LSTM implementation with sliding window datasets
+├── analyze_features.py     # Analysis: Permutation importance to interpret "Black Box" models
 ├── backtest.py             # Simulation: Event-driven backtester with dynamic portfolio management
-└── analyze_performance.py  # Reporting: Generates visualizations and financial metrics (Sharpe, Win Rate)
+└── analyze_trade.py        # Reporting: Generates visualizations and financial metrics (Sharpe, Win Rate)
+
+## 💻 Installation & Usage
+
+### Prerequisites
+```bash
+pip install torch pandas numpy matplotlib seaborn yfinance scikit-learn tqdm joblib
+```
+
+### Workflow
+1.  **Download Data:**
+    ```bash
+    python main.py
+    ```
+2.  **Generate Features:**
+    ```bash
+    python feature_engineering.py
+    ```
+3.  **Train Model:**
+    ```bash
+    python train_model.py
+    ```
+4.  **Run Backtest:**
+    ```bash
+    python backtest.py
+    ```
+5. **Analyze Results:**
+    ```bash
+    python analyze_features.py analyze_trade.py 
+    ```
+
+    
