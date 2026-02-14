@@ -42,7 +42,7 @@ Using Permutation Importance, we identified that long-term trend indicators (`sm
 The codebase is modularized to mimic a production-grade quantitative pipeline:
 
 ```bash
-├── main.py                 # Data Ingestion: Downloads historical data via yfinance API
+├── getdata.py              # Data Ingestion: Downloads historical data via yfinance
 ├── indicator.py            # Library: Custom implementation of technical indicators (RSI, MACD, BOLL, etc.)
 ├── feature_engineering.py  # ETL Pipeline: Cleans data, generates factors, calculates Alpha Targets
 ├── train.py                # Modeling: PyTorch LSTM implementation with sliding window datasets
@@ -61,7 +61,7 @@ pip install torch pandas numpy matplotlib seaborn yfinance scikit-learn tqdm job
 ### Workflow
 1.  **Download Data:**
     ```bash
-    python main.py
+    python getdata.py
     ```
 2.  **Generate Features:**
     ```bash
