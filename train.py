@@ -37,8 +37,8 @@ class Config:
     feature_cols = [
         'sma100_gap',
         'sma60_gap',
-        'rsi14',           # Core Trend
-        'bb_position',     # Relative Position (Overbought/Oversold)
+        'rsi14',           
+        'bb_position',     
         'k_upper',
     ]
 
