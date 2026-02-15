@@ -26,7 +26,7 @@ The strategy significantly outperformed the S&P 500 benchmark during the out-of-
 *(Blue: AI Strategy | Grey: S&P 500 Benchmark)*
 
 **Strategy Logic:**
-*   **Alpha Selection (Top-K):** The model screens the S&P 500 universe daily. It only enters positions when the predicted Alpha Score is **> 0.3**, selecting the highest-ranked candidates.
+*   **Alpha Selection (Top-K):** The model screens the S&P 500 universe daily. It only enters positions when the predicted Alpha Score is **> 0.3** (> 0 indicates that the model has more than 50% confidence that the stock will outperform the S&P 500 index.), selecting the highest-ranked candidates.
 *   **Dynamic Position Sizing (Compounding):** The portfolio is capped at **5 positions** (20% allocation each). Crucially, trade sizes are dynamically calculated based on *Current Total Equity* rather than initial capital, allowing the portfolio to compound gains aggressively during winning streaks.
 *   **Condition-Based Exit:** Holdings are reviewed on a weekly basis (every 7 days). A position is liquidated if the model's predicted score turns negative (`Score < 0`), ensuring capital is protected from deteriorating trends.
 
