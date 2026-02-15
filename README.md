@@ -12,7 +12,7 @@ This project implements an end-to-end algorithmic trading system leveraging **De
 Unlike traditional price prediction models, this system focuses on **Cross-Sectional Alpha Scoring**—ranking stocks based on their relative strength against the market (SPY) and volatility metrics. The project demonstrates a complete quantitative workflow: from data ingestion and complex feature engineering to model training and event-driven backtesting.
 
 **Key Performance Highlight (Backtest):**
-- **Total Return:** +483% (vs SPY +86%) over the test period (2023-2026).
+- **Total Return:** Achieved a CAGR of 79.9% (Total Return +483%) vs. S&P 500 Benchmark (+23% CAGR) over the 3-year out-of-sample period.
 - **Strategy:** Dynamic position sizing with compounding capital.
 
 ---
